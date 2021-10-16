@@ -48,7 +48,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-app = FastAPI()
+app = FastAPI(title="UTS II3160 - 18219043", description="Berikut ini adalah UTS Fadli Naufal Rahman")
 
 
 def verify_password(plain_password, hashed_password):
@@ -120,7 +120,7 @@ app = FastAPI()
 
 @app.get('/')
 def root():
-    return{'Welcome to 18219043 API, you can do CRUD operations here'}
+    return{'Welcome to 18219043 API, you can do CRUD operations here https://uts-tst-18219043.herokuapp.com/docs'}
 
 @app.get('/get_password_hash')
 async def hash_password(password: str):
