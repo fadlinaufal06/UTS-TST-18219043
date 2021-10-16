@@ -114,9 +114,6 @@ async def get_current_active_user(current_user: User = Depends(get_current_user)
 
 with open("menu.json", "r") as read_file:
     data = json.load(read_file)
-app = FastAPI()
-
-
 
 @app.get('/')
 def root():
